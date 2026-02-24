@@ -159,11 +159,12 @@ function checkSpecialTerrain(tile) {
 }
 
 function drawCoordinates(currentCoords,drawHexX,drawHexY) {
-    CANVAS_CONTEXT.font = $coordinatesFont;
-    CANVAS_CONTEXT.fillStyle = "#000";
-    CANVAS_CONTEXT.fillText(currentCoords.join(','),
-                           drawHexX + (HEX_WIDTH / 2) -
-                           (HEX_WIDTH/4), drawHexY + (HEX_HEIGHT - 5));
+	CANVAS_CONTEXT.font = $coordinatesFont;
+	CANVAS_CONTEXT.fillStyle = "#000";
+	CANVAS_CONTEXT.textAlign = "center";
+	CANVAS_CONTEXT.fillText(currentCoords.join(','),
+							drawHexX + (HEX_WIDTH / 2) -
+							(HEX_WIDTH/4), drawHexY + (HEX_HEIGHT - 5));
 }
 
 function drawHex(drawHexX, drawHexY, hexTerrain) {
